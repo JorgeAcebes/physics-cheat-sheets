@@ -31,8 +31,7 @@ Plug $I_{\text{int}}$ en int. ext. y queda resolver integrales del tipo $\int x^
 $E^{(1)} = \frac{e^2}{4\pi\epsilon_0} \frac{4Z^3}{a_0^3} \int_0^\infty \left[ r_1 e^{-\frac{2Zr_1}{a_0}} - e^{-\frac{4Zr_1}{a_0}} \left( r_1 + \frac{Z r_1^2}{a_0} \right) \right] dr_1$
 
 \section*{Integrals%
-\normalfont\scriptsize{ $(n\in\mathbb{N}_0,m\in\mathbb{Z},\alpha,\beta,\gamma,\delta,\mu,\nu,\sigma,r\in\mathbb{R},x\in\mathbb{R}\cap\mathrm{Dom}_f,\;a,b,z\in\mathbb{C})$}\\ 
-\normalfont\scriptsize{+C omitted. Avoid division by 0. Most results can be extended to $\mathbb{C}$.}}
+\normalfont\scriptsize{ $(n\in\mathbb{N}_0,m\in\mathbb{Z},\alpha,\beta,\gamma,\delta,\mu,\nu,\sigma,r\in\mathbb{R},x\in\mathbb{R}\cap\mathrm{Dom}_f,\;a,b,z\in\mathbb{C})$}} 
 \underline{Basic}\\[0pt]
     \hspace*{0.2cm}
     \scalebox{0.785}{$\int (x+\alpha)^rdx \!=\!\frac{(x+\alpha)^{r+1}}{r+1}$\;\;\;\;\;$ \int x(x+\alpha)^rdx \!=\!\frac{(x+\alpha)^{r+1}(rx{+}x{-}\alpha)}{(r{+}1)(r{+}2)}$\;\;\;\;\;$\int a^xdx \!=\!\frac{a^x}{\ln a}$\;\;\;\;\;$\int u\,dv =uv{-}\int v\,du$}\\
@@ -139,62 +138,6 @@ $\int\limits^{r}_{\frac{a}{k}} \sqrt{k^{2} - \frac{a^{2}}{x^{2}}} \, \mathrm{d}x
 
  
 
-\section*{Coordinate Systems}
-\underline{Spherical} $(\theta \in [0, \pi], \phi \in [0, 2\pi))$
-\begin{align*}
-&\begin{cases} 
-x = r \sin\theta\cos\phi \\ 
-y = r \sin\theta\sin\phi \\ 
-z = r \cos\theta 
-\end{cases}
-&
-\begin{cases} 
-\mathbf{\hat{x}} = \sin\theta\cos\phi\,\mathbf{\hat{r}} + \cos\theta\cos\phi\,\bm{\hat{\theta}} - \sin\phi\,\bm{\hat{\phi}} \\
-\mathbf{\hat{y}} = \sin\theta\sin\phi\,\mathbf{\hat{r}} + \cos\theta\sin\phi\,\bm{\hat{\theta}} + \cos\phi\,\bm{\hat{\phi}} \\
-\mathbf{\hat{z}} = \cos\theta\,\mathbf{\hat{r}} - \sin\theta\,\bm{\hat{\theta}} 
-\end{cases}
-\\[0pt]
-&\begin{cases} 
-r = \sqrt{x^2+y^2+z^2} \\ 
-\theta = \arctan(\sqrt{x^2+y^2}/z) \\ 
-\phi = \arctan(y/x) 
-\end{cases}
-&
-\begin{cases} 
-\mathbf{\hat{r}} = \sin\theta\cos\phi\,\mathbf{\hat{x}} + \sin\theta\sin\phi\,\mathbf{\hat{y}} + \cos\theta\,\mathbf{\hat{z}} \\ 
-\bm{\hat{\theta}} = \cos\theta\cos\phi\,\mathbf{\hat{x}} + \cos\theta\sin\phi\,\mathbf{\hat{y}} - \sin\theta\,\mathbf{\hat{z}} \\ 
-\bm{\hat{\phi}} = -\sin\phi\,\mathbf{\hat{x}} + \cos\phi\,\mathbf{\hat{y}} 
-\end{cases}
-\end{align*}
-
-\underline{Cylindrical}  $(\rho \in [0, \infty), \phi \in [0, 2\pi))$
-\begin{align*}
-&\begin{cases} 
-x = \rho\cos\phi \\ 
-y = \rho\sin\phi \\ 
-z = z 
-\end{cases} & 
-\begin{cases} 
-\mathbf{\hat{x}} = \cos\phi\,\bm{\hat{\rho}} - \sin\phi\,\bm{\hat{\phi}} \\ 
-\mathbf{\hat{y}} = \sin\phi\,\bm{\hat{\rho}} + \cos\phi\,\bm{\hat{\phi}} \ \ \
-\\ 
-\mathbf{\hat{z}} = \mathbf{\hat{z}} 
-\end{cases}
-\\[0pt]
-&\begin{cases} 
-\rho = \sqrt{x^2+y^2} \\ 
-\phi = \arctan(y/x) \\ 
-z = z 
-\end{cases}
-&
-\begin{cases} 
-\bm{\hat{\rho}} = \cos\phi\,\mathbf{\hat{x}} + \sin\phi\,\mathbf{\hat{y}} \\ 
-\bm{\hat{\phi}} = -\sin\phi\,\mathbf{\hat{x}} + \cos\phi\,\mathbf{\hat{y}} \\ 
-\mathbf{\hat{z}} = \mathbf{\hat{z}} 
-\end{cases}
-\end{align*}
-
-
 \section{Vector Derivatives}
 \underline{Cartesian} ($d\mathbf{l} = dx\,\hat{\mathbf{x}} + dy\,\hat{\mathbf{y}} + dz\,\hat{\mathbf{z}}$, $dV = dx\,dy\,dz$)
 \begin{align*}
@@ -262,9 +205,62 @@ z = z
 \end{align*}
 
 
-\begin{center}
-\includegraphics[width=0.3\linewidth]{scattering_diagram.png}
-\end{center}
+
+\section*{Coordinate Systems}
+\underline{Spherical} $(\theta \in [0, \pi], \phi \in [0, 2\pi))$
+\begin{align*}
+&\begin{cases} 
+x = r \sin\theta\cos\phi \\ 
+y = r \sin\theta\sin\phi \\ 
+z = r \cos\theta 
+\end{cases}
+&
+\begin{cases} 
+\mathbf{\hat{x}} = \sin\theta\cos\phi\,\mathbf{\hat{r}} + \cos\theta\cos\phi\,\bm{\hat{\theta}} - \sin\phi\,\bm{\hat{\phi}} \\
+\mathbf{\hat{y}} = \sin\theta\sin\phi\,\mathbf{\hat{r}} + \cos\theta\sin\phi\,\bm{\hat{\theta}} + \cos\phi\,\bm{\hat{\phi}} \\
+\mathbf{\hat{z}} = \cos\theta\,\mathbf{\hat{r}} - \sin\theta\,\bm{\hat{\theta}} 
+\end{cases}
+\\[0pt]
+&\begin{cases} 
+r = \sqrt{x^2+y^2+z^2} \\ 
+\theta = \arctan(\sqrt{x^2+y^2}/z) \\ 
+\phi = \arctan(y/x) 
+\end{cases}
+&
+\begin{cases} 
+\mathbf{\hat{r}} = \sin\theta\cos\phi\,\mathbf{\hat{x}} + \sin\theta\sin\phi\,\mathbf{\hat{y}} + \cos\theta\,\mathbf{\hat{z}} \\ 
+\bm{\hat{\theta}} = \cos\theta\cos\phi\,\mathbf{\hat{x}} + \cos\theta\sin\phi\,\mathbf{\hat{y}} - \sin\theta\,\mathbf{\hat{z}} \\ 
+\bm{\hat{\phi}} = -\sin\phi\,\mathbf{\hat{x}} + \cos\phi\,\mathbf{\hat{y}} 
+\end{cases}
+\end{align*}
+
+\underline{Cylindrical}  $(\rho \in [0, \infty), \phi \in [0, 2\pi))$
+\begin{align*}
+&\begin{cases} 
+x = \rho\cos\phi \\ 
+y = \rho\sin\phi \\ 
+z = z 
+\end{cases} & 
+\begin{cases} 
+\mathbf{\hat{x}} = \cos\phi\,\bm{\hat{\rho}} - \sin\phi\,\bm{\hat{\phi}} \\ 
+\mathbf{\hat{y}} = \sin\phi\,\bm{\hat{\rho}} + \cos\phi\,\bm{\hat{\phi}} \ \ \
+\\ 
+\mathbf{\hat{z}} = \mathbf{\hat{z}} 
+\end{cases}
+\\[0pt]
+&\begin{cases} 
+\rho = \sqrt{x^2+y^2} \\ 
+\phi = \arctan(y/x) \\ 
+z = z 
+\end{cases}
+&
+\begin{cases} 
+\bm{\hat{\rho}} = \cos\phi\,\mathbf{\hat{x}} + \sin\phi\,\mathbf{\hat{y}} \\ 
+\bm{\hat{\phi}} = -\sin\phi\,\mathbf{\hat{x}} + \cos\phi\,\mathbf{\hat{y}} \\ 
+\mathbf{\hat{z}} = \mathbf{\hat{z}} 
+\end{cases}
+\end{align*}
+
 
 \section*{EDOS}
 $y'' + k^2 y = 0$
@@ -274,7 +270,7 @@ $y'' + k^2 y = 0$
       \text{misma paridad que $V(r)$} \\
        \text{o similar al otro trozo}
  \end{array}$}\\
-\textbf{Ecuación Radial Libre:} $\left[\frac{d^2}{dr^2} + k^2 - \frac{l(l+1)}{r^2}\right] u_l(r) = 0 \implies u_l(r) = A r j_l(kr) + B r n_l(kr)$. \\
+\textbf{Ecuación Radial Libre:} $\left[\frac{d^2}{dr^2} + k^2 - \frac{l(l+1)}{r^2}\right] u_l(r) = 0 \Rightarrow u_l(r) = A r j_l(kr) + B r n_l(kr)$. \\
 
 \textbf{Bessel Esf.:} $\left[\frac{d^2}{d\rho^2} - \frac{l(l+1)}{\rho^2}+1\right] (\rho \tilde{R}_l (\rho)) = 0$ \;\; 
 $j_0 = \frac{\sin\rho}{\rho}$; $n_0 = -\frac{\cos\rho}{\rho}$. \\
@@ -309,7 +305,6 @@ $\delta(E) \approx \delta_{bg} + \arctan\left(\frac{\Gamma/2}{E_R - E}\right)$
 \textbf{Quantity} & \textbf{Symbol} & \textbf{Value} & \textbf{Unit} \\
 \noalign{\vskip 1pt \hspace{2pt} \rule{0.99\linewidth}{0.3pt}}
 speed of light in vacuum & $c$ & 299\,792\,458 & m s$^{-1}$ \\
-constant of gravitation & $G$ & $6.67430\times10^{-11}$ & m$^3$ kg$^{-1}$ s$^{-2}$ \\
 Planck constant & $h$ & $6.62607015\times10^{-34}$ & J Hz$^{-1}$ \\
 reduced Planck constant & $\hbar$ & $1.054571817 \times10^{-34}$ & J s \\
 elementary charge & $e$ & $1.602176634\times10^{-19}$ & C \\
@@ -322,8 +317,6 @@ vacuum impedance&
 $Z_0 = \mu_0c$&
 $376.73031346177$&
 $\Omega$\\
-Josephson constant & $K_J=2e/h$ & $483\,597.8484 \times10^9$ & Hz V$^{-1}$ \\
-von Klitzing constant & $R_K=2\pi\hbar/e^2$ & $25\,812.80745 \ $ & $\Omega$ \\
 magnetic flux quantum & $\Phi_0=2\pi\hbar/2e$ & $2.067833848 \times10^{-15}$ & Wb \\
 conductance quantum & $G_0=2e^2/2\pi\hbar$ & $7.748091729 \times10^{-5}$ & S \\
 inverse conductance quantum&
@@ -356,17 +349,12 @@ $\mu_N= e\hbar/2m_p$&
 $5.050 783 7393\times10^{-27}$&
 J T$^{-1}$\\
 Rydberg frequency & $cR_\infty\!\!=\!\! \tfrac{\alpha ^2 m_ec}{2h} $ & $3.28984196025\times10^{15}$ & Hz \\
-Hartree energy&
-$E_h {=} \alpha ^2 hcR_{\infty}$&
-$4.359 744 722 21\times10^{-18}$&
-J\\
 
 
 %%%% Physico-chemical constants
 
 
 Boltzmann constant & $k_B$ & $1.380649\times10^{-23}$ & J K$^{-1}$ \\
-Stefan–Boltzmann constant & $\sigma\!=\!\tfrac{\pi^2k^4_{B}\!}{60\hbar^3c^2}$ & $5.670374419 \times10^{-8}$ & W m$^{-2}$ K$^{-4}$ \\
 Avogadro constant & $N_A$ & $6.02214076\times10^{23}$ & mol$^{-1}$ \\
 molar gas constant & $R=N_Ak_B$ & $8.314462618 $ & J mol$^{-1}$ K$^{-1}$ \\
 Faraday constant & $F=N_Ae$ & $96\,485.33212 $ & C mol$^{-1}$ \\
@@ -387,12 +375,8 @@ GeV$^{-2}$
 
 \hrule
 ~\\
-Done by: \href{https://www.linkedin.com/in/jorge-acebes-hern%C3%A1ndez/}{Jorge Acebes Hernández}. Complete code on \href{https://github.com/JorgeAcebes/Formularios/tree/main/Mec%C3%A1nica%20Cu%C3%A1ntica%20Avanzada}{GitHub} and \href{https://es.overleaf.com/read/dppnjspdqqjd#6d689d}{Overleaf}   \; 
+Done by: \href{https://www.linkedin.com/in/jorge-acebes-hern%C3%A1ndez/}{Jorge Acebes Hernández}. Complete code on \href{https://github.com/JorgeAcebes/Formularios/tree/main/Mec%C3%A1nica%20Cu%C3%A1ntica%20Avanzada}{GitHub}   \; 
 \href{https://creativecommons.org/licenses/by-nc/4.0/}{CC BY-NC 4.0}
 
 No warranty on material accuracy. Last checked: \today
 
-\vfill
-
-
-\clearpage

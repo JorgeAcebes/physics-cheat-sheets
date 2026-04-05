@@ -333,34 +333,32 @@ Gauge Coulomb $\nabla \cdot \vec{A} = 0, \varphi = 0$. $\hat{\vec{A}} \sim \sum_
 \textbf{Fotón:} Estado $|\vec{k}, \eta\rangle = \hat{a}_{\vec{k},\eta}^\dagger |0\rangle$. Helididad $\eta = \pm 1$.
 
 \section{CUANTIZACIÓN DEL CAMPO E.M.}
-\textbf{Gauge de Coulomb:} $\varphi=0$, $\nabla \cdot \vec{A}=0$.
+\textbf{Gauge de Coulomb:} $\varphi=0$, $\nabla \cdot \vec{A}=0$.\\
 \textbf{Campo Cuántico:}
 $\hat{\vec{A}}(t,\vec{x}) = \int \frac{d^3k}{(2\pi)^3} \frac{1}{\sqrt{2E(k)}} \sum_{\eta=\pm} \vec{\epsilon}_\eta(k) \left[ e^{i(k\cdot x - \omega t)} \hat{a}_\eta(k) + e^{-i(k\cdot x - \omega t)} \hat{a}_\eta^\dagger(k) \right]$.
-\textbf{Relación Dispersión:} $E(k) = \hbar \omega(k) = \hbar c |\vec{k}|$.
+\textbf{Relación Dispersión:} $E(k) = \hbar \omega(k) = \hbar c |\vec{k}|$.\\
 \textbf{Transversalidad:} $\vec{k} \cdot \vec{\epsilon}_\eta(k) = 0$. $\vec{\epsilon}_\eta \cdot \vec{\epsilon}_{\eta'} = \delta_{\eta\eta'}$.
-\textbf{Campos Operadores:}
-$\bullet$ $\hat{\vec{E}} = -\frac{1}{c}\dot{\hat{\vec{A}}} = \frac{i}{\hbar c} \int \dots \sqrt{\frac{E}{2}} \sum \vec{\epsilon}_\eta [ e^{i\dots} \hat{a}_\eta - \text{H.c.} ]$.
-$\bullet$ $\hat{\vec{B}} = \nabla \times \hat{\vec{A}} = i \int \dots \frac{1}{\sqrt{2E}} \sum (\vec{k} \times \vec{\epsilon}_\eta) [ e^{i\dots} \hat{a}_\eta - \text{H.c.} ]$.
-\textbf{Hamiltoniano Radiación:} $\hat{H}_{rad} = \int \frac{d^3k}{(2\pi)^3} E(k) \sum \hat{a}_\eta^\dagger \hat{a}_\eta$.
-\textbf{Estados de Fock:} $|n(\vec{k}, \eta)\rangle = \frac{1}{\sqrt{n!}}(\hat{a}_\eta^\dagger)^n |0\rangle$. Energía $n \hbar \omega$.
-\textbf{Función de onda del fotón:} $\Psi_{\vec{k},\eta}(t, \vec{x}) = \langle 0 | \hat{\vec{A}} | \vec{k}, \eta \rangle = \frac{1}{\sqrt{2E(k)}} \vec{\epsilon}_\eta e^{i(k \cdot x - \omega t)}$.
-\textbf{Ejercicio Tip:} Si piden el valor esperado de $\vec{E}^2$, recuerda que aparecerá el término de energía del punto cero que se suele renormalizar/normalizar a $|0\rangle$.
+\\\textbf{Campos Operadores:}
+\\$\bullet$ $\hat{\vec{E}} = -\frac{1}{c}\dot{\hat{\vec{A}}} = \frac{i}{\hbar c} \int \dots \sqrt{\frac{E}{2}} \sum \vec{\epsilon}_\eta [ e^{i\dots} \hat{a}_\eta - \text{H.c.} ]$.
+\\$\bullet$ $\hat{\vec{B}} = \nabla \times \hat{\vec{A}} = i \int \dots \frac{1}{\sqrt{2E}} \sum (\vec{k} \times \vec{\epsilon}_\eta) [ e^{i\dots} \hat{a}_\eta - \text{H.c.} ]$.
+\\\textbf{Hamiltoniano Radiación:} $\hat{H}_{rad} = \int \frac{d^3k}{(2\pi)^3} E(k) \sum \hat{a}_\eta^\dagger \hat{a}_\eta$.
+\\\textbf{Estados de Fock:} $|n(\vec{k}, \eta)\rangle = \frac{1}{\sqrt{n!}}(\hat{a}_\eta^\dagger)^n |0\rangle$. Energía $n \hbar \omega$.
+\\\textbf{Función de onda del fotón:} $\Psi_{\vec{k},\eta}(t, \vec{x}) = \langle 0 | \hat{\vec{A}} | \vec{k}, \eta \rangle = \frac{1}{\sqrt{2E(k)}} \vec{\epsilon}_\eta e^{i(k \cdot x - \omega t)}$.
 
 \section{ESTADOS COHERENTES (GLAUBER)}
-\textbf{Definición:} $|\alpha\rangle = e^{-|\alpha|^2/2} \sum \frac{\alpha^n}{\sqrt{n!}} |n\rangle$. Son autoestados de $\hat{a}$: $\hat{a}|\alpha\rangle = \alpha|\alpha\rangle$.
-\textbf{Propiedades:} $\langle \alpha | \hat{H} | \alpha \rangle = \hbar \omega (|\alpha|^2 + 1/2) = E_{cl} + E_{vac}$.
-\textbf{Límite Clásico:} En un estado de Glauber, $\langle \alpha | \hat{\vec{E}} | \alpha \rangle$ recupera la forma de una onda electromagnética clásica senoidal con amplitud $\propto |\alpha|$.
-\textbf{Incertidumbre:} Minimizan $\Delta x \Delta p = \hbar/2$ (paquetes de mínima incertidumbre).
+\textbf{Definición:} $|\alpha\rangle = e^{-|\alpha|^2/2} \sum \frac{\alpha^n}{\sqrt{n!}} |n\rangle$. Son autoestados de $\hat{a}$: $\hat{a}|\alpha\rangle = \alpha|\alpha\rangle$.\\\textbf{Propiedades:} $\langle \alpha | \hat{H} | \alpha \rangle = \hbar \omega (|\alpha|^2 + 1/2) = E_{cl} + E_{vac}$.
+\\\textbf{Límite Clásico:} En un estado de Glauber, $\langle \alpha | \hat{\vec{E}} | \alpha \rangle$ recupera la forma de una onda electromagnética clásica senoidal con amplitud $\propto |\alpha|$.
+\\\textbf{Incertidumbre:} Minimizan $\Delta x \Delta p = \hbar/2$ (paquetes de mínima incertidumbre).
 
 \section{INTERACCIÓN RADIACIÓN-MATERIA}
 \textbf{Hamiltoniano Total:} $\hat{H} = \hat{H}_{rad} + \hat{H}_{at} + \hat{H}_{int}$.
-\textbf{Acoplamiento Mínimo:} $\vec{p} \to \vec{p} - \frac{q}{c}\hat{\vec{A}}$.
+\\\textbf{Acoplamiento Mínimo:} $\vec{p} \to \vec{p} - \frac{q}{c}\hat{\vec{A}}$.
 $\hat{H}_{int} = \hat{H}_{int}^{(1)} + \hat{H}_{int}^{(2)} + \hat{H}_{int}^{(s)}$.
-$\bullet$ $\hat{H}_{int}^{(1)} = -\frac{q}{mc} \hat{\vec{A}} \cdot \vec{p} \sim \sqrt{\alpha}$ (Procesos de 1 fotón: absorción/emisión).
-$\bullet$ $\hat{H}_{int}^{(2)} = \frac{q^2}{2mc^2} \hat{\vec{A}}^2 \sim \alpha$ (Procesos de 2 fotones: scattering).
-$\bullet$ $\hat{H}_{int}^{(s)} = -\frac{\mu}{s\hbar} \vec{S} \cdot \vec{B}$ (Interacción con el espín).
-\textbf{Teoría de Perturbaciones:} Al ser $\alpha \approx 1/137 \ll 1$, tratamos $\hat{H}_{int}$ como perturbación. El término $\vec{A} \cdot \vec{p}$ domina.
-\textbf{Ejercicio Tip:} En procesos de emisión espontánea, el estado inicial es $|n'\rangle \otimes |0\rangle$ y el final $|n\rangle \otimes |1\rangle$. El elemento de matriz solo recibe contribución de $\hat{a}^\dagger$ de $\hat{H}_{int}^{(1)}$.
+\\$\bullet$ $\hat{H}_{int}^{(1)} = -\frac{q}{mc} \hat{\vec{A}} \cdot \vec{p} \sim \sqrt{\alpha}$ (Procesos de 1 fotón: absorción/emisión).
+\\$\bullet$ $\hat{H}_{int}^{(2)} = \frac{q^2}{2mc^2} \hat{\vec{A}}^2 \sim \alpha$ (Procesos de 2 fotones: scattering).
+\\$\bullet$ $\hat{H}_{int}^{(s)} = -\frac{\mu}{s\hbar} \vec{S} \cdot \vec{B}$ (Interacción con el espín).
+\\\textbf{Teoría de Perturbaciones:} Al ser $\alpha \approx 1/137 \ll 1$, tratamos $\hat{H}_{int}$ como perturbación. El término $\vec{A} \cdot \vec{p}$ domina.
+\\\textbf{Ejercicio Tip:} En procesos de emisión espontánea, el estado inicial es $|n'\rangle \otimes |0\rangle$ y el final $|n\rangle \otimes |1\rangle$. El elemento de matriz solo recibe contribución de $\hat{a}^\dagger$ de $\hat{H}_{int}^{(1)}$.
 
 \section{REGLA DE SELECCIÓN DIPOLAR}
 \textbf{Aproximación Dipolar:} $e^{i\vec{k} \cdot \vec{x}} \approx 1$. Válida si $\lambda_{foton} \gg a_{atomo}$ (Baja energía).
@@ -368,20 +366,20 @@ $\bullet$ $\hat{H}_{int}^{(s)} = -\frac{\mu}{s\hbar} \vec{S} \cdot \vec{B}$ (Int
 $\langle n, l, m | e^{-i\vec{k} \cdot \vec{x}} \vec{p} | n', l', m' \rangle \approx \langle n, l, m | \vec{p} | n', l', m' \rangle$.
 Usando $[\hat{H}_0, \vec{x}] = \frac{\hbar}{im} \vec{p}$:
 $\langle n | \vec{p} | n' \rangle = \frac{im}{\hbar}(E_{n'} - E_n) \langle n | \vec{x} | n' \rangle$.
-\textbf{Reglas de Selección (Dipolo Eléctrico):}
-1. $\Delta l = \pm 1$ (Cambio de paridad).
-2. $\Delta m = 0, \pm 1$.
-3. $\Delta n$ cualquiera.
+\\\textbf{Reglas de Selección (Dipolo Eléctrico):}\\
+1. $\Delta l = \pm 1$ (Cambio de paridad).\\
+2. $\Delta m = 0, \pm 1$.\\
+3. $\Delta n$ cualquiera.\\
 \textbf{Fuerza de Oscilador:} $f_{12} = \frac{2m}{3\hbar^2}(E_2 - E_1) \sum_{m_2, j} |\langle 2 | \hat{x}_j | 1 \rangle|^2$.
 
 \section{EMISIÓN Y ABSORCIÓN}
 \textbf{Emisión Espontánea:} Transición $|i\rangle \to |f\rangle + \gamma$.
-$\Gamma_{2\to 1} = \frac{4\alpha \omega^3}{3c^2} |\langle 1 | \vec{x} | 2 \rangle|^2$.
+$\Gamma_{2\to 1} = \frac{4\alpha \omega^3}{3c^2} |\langle 1 | \vec{x} | 2 \rangle|^2$.\\
 \textbf{Coeficientes de Einstein:}
-$\bullet$ $A_{21}$: Tasa de emisión espontánea.
-$\bullet$ $B_{12}, B_{21}$: Tasas de absorción y emisión estimulada.
-\textbf{Relaciones:} $g_1 B_{12} = g_2 B_{21}$ y $A_{21} = \frac{\hbar \omega^3}{\pi^2 c^3} B_{21}$.
-\textbf{Emisión Estimulada:} Probabilidad $\propto (n_\gamma + 1)$. El $+1$ es la espontánea, el $n_\gamma$ es la estimulada.
+\\$\bullet$ $A_{21}$: Tasa de emisión espontánea.\\
+$\bullet$ $B_{12}, B_{21}$: Tasas de absorción y emisión estimulada.\\
+\textbf{Relaciones:} $g_1 B_{12} = g_2 B_{21}$ y $A_{21} = \frac{\hbar \omega^3}{\pi^2 c^3} B_{21}$.\\
+\textbf{Emisión Estimulada:} Probabilidad $\propto (n_\gamma + 1)$. El $+1$ es la espontánea, el $n_\gamma$ es la estimulada.\\
 \textbf{Ejercicio Tip:} La vida media es $\tau = 1/\sum \Gamma$. Si hay varios canales de desintegración, suma las anchuras $\Gamma_{tot} = \Gamma_1 + \Gamma_2 + \dots$.
 
 \section{EFECTO FOTOELÉCTRICO}
@@ -395,84 +393,80 @@ $\bullet$ Nula en la dirección de incidencia ($\theta = 0$).
 \textbf{Física:} El efecto depende de la frecuencia $\omega$, no de la intensidad (que solo afecta al número de electrones, no a su energía).
 
 \section{ECUACIÓN DE KLEIN-GORDON}
-\textbf{Origen:} Relación relativista $E^2 = p^2c^2 + m^2c^4$.
-$\left( \partial_\mu \partial^\mu + \frac{m^2c^2}{\hbar^2} \right) \phi(x) = 0$. (Operador D'Alembertiano $\square + \mu^2$).
+\textbf{Origen:} Relación relativista $E^2 = p^2c^2 + m^2c^4 \implies \left( \partial_\mu \partial^\mu + \frac{m^2c^2}{\hbar^2} \right) \phi(x) = 0$.\\
 \textbf{Interpretación Probabilística:}
 $\rho = \frac{i\hbar}{2mc^2} (\phi^* \partial_t \phi - \phi \partial_t \phi^*)$.
-\textbf{Problema:} $\rho$ no es definida positiva (puede ser $<0$). Se interpreta como densidad de carga, no de probabilidad.
-\textbf{Soluciones Libre:} $\phi(x) = \int \frac{d^3k}{(2\pi)^3 \sqrt{2k^0}} [ a(k) e^{-ikx} + b^*(k) e^{ikx} ]$.
-Contiene energías positivas y negativas ($E = \pm \sqrt{p^2c^2+m^2c^4}$).
-\textbf{Lím. No Relativista:} Haciendo $\phi(t, \vec{x}) = e^{-imc^2t/\hbar} \Psi(t, \vec{x})$, se recupera la ec. de Schröd para $\Psi$ si $E_{cin} \ll mc^2$.
+\\\textbf{Problema:} $\rho$ no es definida positiva (puede ser $<0$). Se interpreta como densidad de carga.\\
+\textbf{Soluciones Libre:} $\phi(x) = \int \frac{d^3k}{(2\pi)^3 \sqrt{2k^0}} [ a(k) e^{-ikx} + b^*(k) e^{ikx} ]$.\\
+Contiene energías positivas y negativas ($E = \pm \sqrt{p^2c^2+m^2c^4}$).\\
+\textbf{Lím. No Relativista:} Haciendo $\phi(t, \vec{x}) = e^{-imc^2t/\hbar} \Psi(t, \vec{x})$, se recupera la ec. de Schröd para $\Psi$ si $E_{cin} \ll mc^2$.\\
 \textbf{Acoplamiento EM:} Derivada covariante $D_\mu = \partial_\mu + \frac{iq}{\hbar c} A_\mu.  (D_\mu D^\mu + \mu^2) \phi = 0$.
-\\Corriente de probabilidad: $j^\mu = \frac{i\hbar}{2m} (\phi \partial^\mu \phi^* - \phi^* \partial^\mu \phi)$.
+\\\textbf{Corriente de probabilidad:} $j^\mu = \frac{i\hbar}{2m} (\phi \partial^\mu \phi^* - \phi^* \partial^\mu \phi)$.
 
 
 \section{LA ECUACIÓN DE DIRAC LIBRE}
 \textbf{Motivación:} Superar el carácter cuadrático de KG y la densidad $\rho < 0$.
-\textbf{Derivación:} Factorización de $p^2 - m^2c^2 = (\gamma^\mu p_\mu - mc)(\gamma^\nu p_\nu + mc) = 0$.
+\\\textbf{Derivación:} Factorización de $p^2 - m^2c^2 = (\gamma^\mu p_\mu - mc)(\gamma^\nu p_\nu + mc) = 0$.\\
 \textbf{Ecuación:} $(i\hbar \gamma^\mu \partial_\mu - mc)\psi(x) = 0$ o $(i\hbar \cancel{\partial} - mc)\psi = 0$.
-\textbf{Álgebra de Clifford:} $\{\gamma^\mu, \gamma^\nu\} = 2\eta^{\mu\nu}\mathbb{I}$.
-$\bullet$ $(\gamma^0)^2 = \mathbb{I}$, $(\gamma^i)^2 = -\mathbb{I}$. $\bullet$ $\text{tr}(\gamma^\mu) = 0$. $\bullet$ Dimensión mínima $N=4$.
-\textbf{Representación de Dirac (Estándar):}
+\\\textbf{Álgebra de Clifford:} $\{\gamma^\mu, \gamma^\nu\} = 2\eta^{\mu\nu}\mathbb{I}$.\\
+$\bullet$ $(\gamma^0)^2 = \mathbb{I}$, $(\gamma^i)^2 = -\mathbb{I}$.\\ $\bullet$ $\text{tr}(\gamma^\mu) = 0$.\\$\bullet$ Dimensión mínima $N=4$.\\
+$\bullet$ $\gamma^5 = i\gamma^0 \gamma^1 \gamma^2 \gamma^3$.
+\\\textbf{Representación de Dirac (Estándar):}
 $\gamma^0 = \begin{pmatrix} \mathbb{I} & 0 \\ 0 & -\mathbb{I} \end{pmatrix}$, $\gamma^i = \begin{pmatrix} 0 & \sigma^i \\ -\sigma^i & 0 \end{pmatrix}$.
 \textbf{Representación de Weyl (Quiral):}
-$\gamma^0 = \begin{pmatrix} 0 & \mathbb{I} \\ \mathbb{I} & 0 \end{pmatrix}$, $\gamma^i = \begin{pmatrix} 0 & \sigma^i \\ -\sigma^i & 0 \end{pmatrix}$.
-$\gamma^5 = i\gamma^0 \gamma^1 \gamma^2 \gamma^3 = \begin{pmatrix} -\mathbb{I} & 0 \\ 0 & \mathbb{I} \end{pmatrix}$ (en Weyl).
+$\gamma^0 = \begin{pmatrix} 0 & \mathbb{I} \\ \mathbb{I} & 0 \end{pmatrix}$, $\gamma^i = \begin{pmatrix} 0 & \sigma^i \\ -\sigma^i & 0 \end{pmatrix}$.\\
 \textbf{Corriente de Probabilidad:} $j^\mu = c \bar{\psi}\gamma^\mu \psi$. $\rho = \psi^\dagger \psi \ge 0$.
-\textbf{Estrategia Examen:} Si piden probar inv. Lorentz, usa $S[\Lambda] \gamma^\mu S^{-1}[\Lambda] = \Lambda^\mu_{\phantom{\mu}\nu} \gamma^\nu$.
 
 \section{SOLUCIONES Y ESPINORES}
 \textbf{Ondas Planas:} $\psi(x) = u(\vec{k})e^{-ikx}$ ($E>0$) o $v(\vec{k})e^{ikx}$ ($E<0$).
-\textbf{Ecs. Algebraicas:} $(\cancel{k} - \frac{mc}{\hbar})u = 0$ y $(\cancel{k} + \frac{mc}{\hbar})v = 0$.
-\textbf{Estructura (Rep. Dirac):}
+\\\textbf{Ecs. Algebraicas:} $(\cancel{k} - \frac{mc}{\hbar})u = 0$ y $(\cancel{k} + \frac{mc}{\hbar})v = 0$.
+\\\textbf{Estructura (Rep. Dirac):}
 $u_s(\vec{p}) = N \begin{pmatrix} \phi_s \\ \frac{c\vec{\sigma}\cdot\vec{p}}{E+mc^2}\phi_s \end{pmatrix}$, $v_s(\vec{p}) = N \begin{pmatrix} \frac{c\vec{\sigma}\cdot\vec{p}}{E+mc^2}\chi_s \\ \chi_s \end{pmatrix}$.
 $N = \sqrt{(E+mc^2)/2mc^2}$. $\phi, \chi$ espinores de Pauli.
-\textbf{Helicidad:} $\hat{h} = \frac{\vec{S}\cdot\vec{p}}{|\vec{p}|}$. Conmuta con $H$ libre. Proyecta el spin sobre el momento.
+\\\textbf{Helicidad:} $\hat{h} = \frac{\vec{S}\cdot\vec{p}}{|\vec{p}|}$. Conmuta con $H$ libre. Proyecta el spin sobre el momento.
 
 \section{LÍMITE NO RELATIVISTA (NR)}
 Separamos $\psi = \binom{\theta}{\chi} e^{-imct/\hbar}$. $\theta$ (grande), $\chi$ (pequeña).
 $\chi \approx \frac{c\vec{\sigma}\cdot\vec{\pi}}{2mc^2} \theta$. $\vec{\pi} = \vec{p} - \frac{q}{c}\vec{A}$.
 \textbf{Ecuación de Pauli:}
 $i\hbar \partial_t \theta = \left[ \frac{(\vec{p} - \frac{q}{c}\vec{A})^2}{2m} + qA_0 - \frac{q\hbar}{2mc}\vec{\sigma}\cdot\vec{B} \right] \theta$.
-\textbf{Factor G:} Dirac predice $g=2$. El término de spin-campo es $\vec{\mu}\cdot\vec{B}$.
-\textbf{Estrategia:} Para derivar la ec. de Pauli, usa $(\vec{\sigma}\cdot\vec{A})(\vec{\sigma}\cdot\vec{B}) = \vec{A}\cdot\vec{B} + i\vec{\sigma}(\vec{A}\times\vec{B})$ y el hecho de que $[\pi_j, \pi_k] = \frac{i\hbar q}{c}\epsilon_{jkl}B_l$.
+\\\textbf{Factor G:} Dirac predice $g=2$. El término de spin-campo es $\vec{\mu}\cdot\vec{B}$.
 
 \section{CORRECCIONES RELATIVISTAS}
 Hamiltoniano de orden $(mc)^{-2}$ para el átomo de H:
 $H_{rel} = \frac{p^2}{2m} + V(r) - \frac{p^4}{8m^3c^2} + \frac{\hbar^2}{8m^2c^2}(\nabla^2 V) + \frac{1}{2m^2c^2}\frac{1}{r}\frac{dV}{dr} \vec{S}\cdot\vec{L}$.
-1. \textbf{Masa-Velocidad:} $-p^4/8m^3c^2$.
-2. \textbf{Darwin:} $\frac{\hbar^2 \pi e^2}{2m^2c^2} \delta^{(3)}(\vec{r})$. Solo afecta a orbitales $s$ ($l=0$).
-3. \textbf{Spin-Órbita:} $\xi(r) \vec{S}\cdot\vec{L}$. Explica la estructura fina.
+\\1. \textbf{Masa-Velocidad:} $-p^4/8m^3c^2$.
+\\2. \textbf{Darwin:} $\frac{\hbar^2 \pi e^2}{2m^2c^2} \delta^{(3)}(\vec{r})$. Solo afecta a orbitales $s$ ($l=0$).
+\\3. \textbf{Spin-Órbita:} $\xi(r) \vec{S}\cdot\vec{L}$. Explica la estructura fina.
 
 \section{ANTIMATERIA Y SIMETRÍA C}
 \textbf{Conjugación C:} $\psi^C = C \bar{\psi}^T = i\gamma^2 \gamma^0 \bar{\psi}^T$.
-$\bullet$ Electrón ($q=-e, m$) $\leftrightarrow$ Positrón ($q=+e, m$).
-$\bullet$ En el mar de Dirac, un "hueco" en los niveles $E < 0$ se comporta como una partícula de carga opuesta y energía positiva.
-\textbf{Zitterbewegung:} Interferencia de soluciones $E \gtrless 0$.
+\\$\bullet$ Electrón ($q=-e, m$) $\leftrightarrow$ Positrón ($q=+e, m$).
+\\$\bullet$ En el mar de Dirac, un ``hueco" en los niveles $E < 0$ se comporta como una partícula de carga opuesta y energía positiva.
+\\\textbf{Zitterbewegung:} Interferencia de soluciones $E \gtrless 0$.
 $\hat{v}(t) = c^2 \vec{p} H^{-1} + (\dots) e^{-i 2 H t/\hbar}$. Oscilación rápida de frecuencia $\omega \approx 2mc^2/\hbar$.
 
 \section{LÍMITE DE MASA NULA (WEYL)}
 Si $m=0$, el Hamiltoniano desacopla espinores $L$ y $R$.
-\textbf{Ecs. de Weyl:} $(D_0 + \vec{\sigma}\cdot\vec{D})\psi_R = 0$; $(D_0 - \vec{\sigma}\cdot\vec{D})\psi_L = 0$.
-\textbf{Quiralidad:} $\gamma^5 \psi_{R,L} = \pm \psi_{R,L}$. Para $m=0$, helicidad = quiralidad.
-\textbf{Corriente:} $j^0 = c(\psi_L^\dagger \psi_L + \psi_R^\dagger \psi_R)$; $\vec{j} = c(-\psi_L^\dagger \vec{\sigma} \psi_L + \psi_R^\dagger \vec{\sigma} \psi_R)$.
+\\\textbf{Ecs. de Weyl:} $(D_0 + \vec{\sigma}\cdot\vec{D})\psi_R = 0$; $(D_0 - \vec{\sigma}\cdot\vec{D})\psi_L = 0$.
+\\\textbf{Quiralidad:} $\gamma^5 \psi_{R,L} = \pm \psi_{R,L}$. Para $m=0$, helicidad = quiralidad.
+\\\textbf{Corriente:} $j^0 = c(\psi_L^\dagger \psi_L + \psi_R^\dagger \psi_R)$; $\vec{j} = c(-\psi_L^\dagger \vec{\sigma} \psi_L + \psi_R^\dagger \vec{\sigma} \psi_R)$.
 
 \section{PARADOJA DE KLEIN}
 Scattering en escalón de potencial $V_0$.
-\textbf{Regímenes de la Barrera:}
-1. $E - mc^2 > V_0$: Transmisión clásica-cuántica normal.
-2. $E - mc^2 < V_0 < E + mc^2$: Reflexión total ($R=1$). Onda evanescente.
-3. $V_0 > E + mc^2$: \textbf{Paradoja de Klein}. $R > 1$ y $T < 0$ (flujo entrante desde la barrera).
-\textbf{Física:} Creación de pares $e^- e^+$. El campo es tan fuerte que "arranca" electrones del vacío, dejando positrones que se propagan dentro de la barrera.
-\textbf{Ejercicio Tip:} Calcula $\tilde{k} = \sqrt{(E-V_0)^2 - m^2c^4}/c$. En el régimen 3, $\tilde{k}$ es real pero el flujo se invierte.
+\\\textbf{Regímenes de la Barrera:}
+\\1. $E - mc^2 > V_0$: Transmisión clásica-cuántica normal.
+\\2. $E - mc^2 < V_0 < E + mc^2$: Reflexión total ($R=1$). Onda evanescente.
+\\3. $V_0 > E + mc^2$: \textbf{Paradoja de Klein}. $R > 1$ y $T < 0$ (flujo entrante desde la barrera).
+\\\textbf{Física:} Creación de pares $e^- e^+$. El campo es tan fuerte que ``arranca" electrones del vacío, dejando positrones que se propagan dentro de la barrera.
 
 \section{ ÁLGEBRA Y MATRICES ÚTILES}
 $\bullet$ $\{\gamma^\mu, \gamma^\nu\} = 2\eta^{\mu\nu}$. $\eta = (-1,1,1,1)$.
-$\bullet$ $\gamma^0 = (\gamma^0)^\dagger$; $\gamma^i = -(\gamma^i)^\dagger$. $\bullet$ $\bar{\psi} = \psi^\dagger \gamma^0$.
-$\bullet$ $\text{tr}(\mathbb{I}) = 4$; $\text{tr}(\gamma^\mu) = 0$; $\text{tr}(\gamma^\mu \gamma^\nu) = 4\eta^\mu\nu$.
-$\bullet$ $\text{tr}(\gamma^5) = 0$; $\text{tr}(\gamma^5 \gamma^\mu \gamma^\nu) = 0$.
-$\bullet$ $\gamma^\mu \gamma_\mu = 4$; $\gamma^\mu \gamma^\nu \gamma_\mu = -2\gamma^\nu$.
-$\bullet$ \textbf{Bilinear L-Lorentz:} $\bar{\psi}\psi$ (Escalar), $\bar{\psi}\gamma^5\psi$ (Pseudoesc.), $\bar{\psi}\gamma^\mu\psi$ (Vector), $\bar{\psi}\gamma^\mu\gamma^5\psi$ (Axial).
+\\$\bullet$ $\gamma^0 = (\gamma^0)^\dagger$; $\gamma^i = -(\gamma^i)^\dagger$. \\$\bullet$ $\bar{\psi} = \psi^\dagger \gamma^0$.
+\\$\bullet$ $\text{tr}(\mathbb{I}) = 4$; $\text{tr}(\gamma^\mu) = 0$; $\text{tr}(\gamma^\mu \gamma^\nu) = 4\eta^\mu\nu$.
+\\$\bullet$ $\text{tr}(\gamma^5) = 0$; $\text{tr}(\gamma^5 \gamma^\mu \gamma^\nu) = 0$.
+\\$\bullet$ $\gamma^\mu \gamma_\mu = 4$; $\gamma^\mu \gamma^\nu \gamma_\mu = -2\gamma^\nu$.
+\\$\bullet$ \textbf{Bilinear L-Lorentz:} $\bar{\psi}\psi$ (Escalar), $\bar{\psi}\gamma^5\psi$ (Pseudoesc.), $\bar{\psi}\gamma^\mu\psi$ (Vect), $\bar{\psi}\gamma^\mu\gamma^5\psi$ (Axial).
 
 % \section{GUÍA DE EJERCICIOS DIRAC}
 % \textbf{1. Cálculo de Espinores:} Siempre normaliza $\bar{u}u = 2m$ o $u^\dagger u = 2E/c$. Verifica la helicidad usando $\vec{\sigma}\cdot\vec{p}$.
