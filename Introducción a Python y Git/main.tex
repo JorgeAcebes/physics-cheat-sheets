@@ -1,0 +1,76 @@
+% Minimal-spacing, three-column LaTeX preamble with fixed smallest font size
+
+\documentclass[8pt,a4paper,fleqn]{extarticle} % use smallest base font available
+
+% --- Geometry settings: minimal margins, landscape orientation ---
+\usepackage[landscape, top=-0.1cm, left=0.1cm, right=0.1cm, bottom=0.1cm]{geometry}
+
+% --- No page numbering ---
+\pagestyle{empty}
+
+% --- Math and symbol packages with compact font style ---
+\usepackage{amssymb,amsmath,amsthm,amsfonts,bm,esint,mathtools}
+\usepackage{relsize}
+\usepackage{cancel}
+
+% --- Multicolumn layout setup ---
+\usepackage{multicol}
+\setlength{\columnsep}{0.1cm}
+\setlength{\multicolsep}{0pt}
+
+% --- Hyperlinks set up ---
+\usepackage{xcolor}
+\usepackage{hyperref}
+\definecolor{morado}{RGB}{191, 62, 255} 
+\hypersetup{colorlinks=true, linkcolor=red, urlcolor=morado}
+
+% --- Paragraph and line spacing adjustments ---
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+\renewcommand{\baselinestretch}{1}
+
+% --- Enforce fixed font metrics ---
+\makeatletter
+\renewcommand\normalsize{%
+  \@setfontsize\normalsize{7}{7}%
+  \abovedisplayskip 1pt plus 1pt minus 1pt%
+  \belowdisplayskip \abovedisplayskip%
+  \abovedisplayshortskip 1pt plus 1pt%
+  \belowdisplayshortskip 1pt plus 1pt minus 1pt}
+\makeatother
+
+% --- Code structure ----
+\usepackage{fvextra}
+\fvset{
+  breaklines=true,
+  breakanywhere=true,
+  fontsize=\tiny,
+  baselinestretch=0.9
+}
+\DeclareUnicodeCharacter{251C}{\mbox{\kern.2ex\vrule height1.5ex depth.5ex width.125ex\kern-.125ex\vrule height.125ex depth0ex width.75ex\kern.2ex}}
+\DeclareUnicodeCharacter{2502}{\mbox{\kern.2ex\vrule height1.5ex depth.5ex width.125ex\kern.2ex}}
+\DeclareUnicodeCharacter{2514}{\mbox{\kern.2ex\vrule height1.5ex depth-1.375ex width.125ex\kern-.125ex\vrule height.125ex depth0ex width.75ex\kern.2ex}}
+\DeclareUnicodeCharacter{2500}{\mbox{\vrule height.125ex depth0ex width1ex}}
+
+\newcommand{\dblash}{\textbackslash\!\!\textbackslash }
+
+% --- Compact section headers ---
+\usepackage[compact]{titlesec} 
+\titlespacing{\section}{0pt}{1pt}{1pt}
+\titleformat{\section}{\normalfont\bfseries\color{magenta}}{}{0em}{}
+
+\usepackage{booktabs}
+\setlength{\columnseprule}{0.2pt} 
+\usepackage{tabularx}
+\usepackage{lipsum}
+
+\begin{document}
+\begin{multicols}{3}
+\raggedright
+\scriptsize
+
+\input{configuration}
+\input{basics}
+
+\end{multicols}
+\end{document}

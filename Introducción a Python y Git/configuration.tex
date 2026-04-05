@@ -1,0 +1,182 @@
+\section{COMANDOS TERMINAL \normalfont{(\texttt{Wnd+R})}}
+\newcommand{\kbraw}[4]{#1 & \texttt{#2} & #3 & \texttt{#4} \\}
+
+
+\noindent
+\begin{tabularx}{\linewidth}{@{} X l | X l @{}}
+\multicolumn{2}{c}{\texttt{SISTEMA Y EJECUCIÓN}} & \multicolumn{2}{c}{\texttt{ARCHIVOS Y DIRECTORIOS}} \\
+\midrule
+\kbraw{Listar archivos}{ls}{Crear directorio}{mkdir [nombre]}
+\kbraw{Ruta actual}{pwd}{Entrar a carpeta}{cd [ruta]}
+\kbraw{Procesos activos}{Get-Process}{Subir un nivel}{cd ..}
+\kbraw{Limpiar pantalla}{cls}{Borrar (recursivo)}{rm -rf [nombre]}
+\kbraw{Editar archivo}{code [archivo]}{Copiar (recursivo)}{cp -r [orig] [dest]}
+\kbraw{Manual/Ayuda}{help [comando]}{Mover o Renombrar}{mv [viejo] [nuevo]}
+\kbraw{Ejecutar script}{python script.py}{Ver contenido}{cat [archivo]}
+\midrule
+\end{tabularx}
+\noindent
+\begin{tabularx}{\linewidth}{@{} X l | X l @{}}
+\multicolumn{2}{c}{\texttt{ENTORNO PYTHON (PIP)}} & \multicolumn{2}{c}{\texttt{UTILIDADES DE RED/DATOS}} \\
+\midrule
+\kbraw{Instalar paquete}{pip install [paquete]}{Mostrar estructura}{Tree}
+\kbraw{Lista paquetes}{pip list}{Descargar archivo}{wget [url] -OutFile [n]}
+\kbraw{Instalar requisitos}{pip install -r req.txt}{Conexión Remota}{ssh usuario@ip}
+\kbraw{Actualizar pip}{pip install -U pip}{Copiar a remoto}{scp [f] user@ip:[path]}
+\bottomrule
+\end{tabularx}
+
+
+
+\section{SHORTCUTS VS Code \normalfont{(\texttt{Ctrl+K Ctrl+S})}} 
+% Comando para facilitar la edición: \kbrow{Acción Izq}{Atajo Izq}{Acción Der}{Atajo Der}
+\newcommand{\kbrow}[4]{#1 & \texttt{#2} & #3 & \texttt{#4} \\}
+
+\begin{tabularx}{\linewidth}{@{} X l | X l @{}}
+\multicolumn{2}{c}{\texttt{INTERFAZ}} & \multicolumn{2}{c}{\texttt{EDICIÓN}} \\
+\midrule
+\kbrow{Ajustes}{Ctrl+,}{Comentar}{Ctrl+Ç}
+\kbrow{Show/Hide Sidebar}{Ctrl+B}{Bloque comentario}{Shift+Alt+A}
+\kbrow{Show/Hide Second Sidebar}{Ctrl+Alt+B}{Select all}{Ctrl+A}
+\kbrow{Quick Open}{Ctrl+P}{Select ocurrencia}{Ctrl+D}       
+\kbrow{Paleta comandos}{Ctrl+Shift+P}{Select línea}{Ctrl+L}   
+\kbrow{Abrir Explorador}{Ctrl++Shift+E}{Copiar línea}{Shift+Alt+$\uparrow\!\!/\!\!\downarrow$}
+\kbrow{Búsqueda Global}{Ctrl+Shift+F}{Mover línea}{Alt+$\uparrow\!\!/\!\!\downarrow$}
+\kbrow{Terminal}{Ctrl+Ñ}{Insertar línea abajo}{Ctrl+Shift+Enter}
+\kbrow{Dividir/Unir editor actual}{Ctrl+Alt+$\rightleftarrows$}{Borrar línea}{Ctrl+Shift+K}
+\kbrow{Dividir Editor}{Ctrl+\textbackslash}{Multicursor}{Ctrl+Alt+$\uparrow\!\!/\!\!\downarrow$}
+\midrule
+\addlinespace[2ex]
+\multicolumn{2}{c}{\texttt{NAVEGACIÓN}} & \multicolumn{2}{c}{\texttt{ARCHIVOS}} \\
+\midrule
+\kbrow{Navegar editor}{Ctrl+Re/AvPag}{Nuevo archivo}{Ctrl+N}
+\kbrow{Vista previa definición}{Alt+F12}{Guardar}{Ctrl+S}
+\kbrow{Ir a definición}{Ctrl+Click}{Guardar todo}{Ctrl+K S}
+\kbrow{Ir a símbolo}{Ctrl+Shift+O}{Cerrar pestaña}{Ctrl+W}
+\kbrow{Buscar en archivo}{Ctrl+F}{Reabrir pestaña}{Ctrl+Shift+T}
+\kbrow{Reemplazar}{Ctrl+H}{Cerrar carpeta}{Ctrl+K F}
+\kbrow{Ir a línea}{Ctrl+G}{
+Correr Python (propio)}{Ctrl+R}
+\kbrow{Show Problems}{Ctrl+Shift+M}{Cambiar lenguaje}{Ctrl+K M}
+\bottomrule
+\end{tabularx}
+
+
+
+
+
+\section{INSTALACIÓN WINDOWS DE PYTHON Y PIP}
+\textbf{1.}: Descarga desde \href{https://www.python.org/}{\texttt{python.org}} $\rightarrow$ \text{Check: Add Python to PATH}.\\
+\textbf{2. }: \texttt{python -m pip --version} \textit{(Si falta: \texttt{python -m ensurepip --default-pip})}.
+\hyperlink{pip_venv}{Continuación en venv.}\\
+
+
+
+\section{CONFIGURACIÓN BASE VS CODE}
+\textbf{Extensiones}: 
+\texttt{ms-python.python},
+\texttt{ms-toolsai.jupyter}
+
+\textbf{Ajustes}: \texttt{Auto-Save:\,After Delay, Format on save:\,\checkmark, Python Language Server:\,Pylance, Line Numbers:\,\checkmark}
+
+
+\section{GESTIÓN DE ENTORNOS (venv) -- \normalfont{\scalebox{0.8}{\text{desde VS CODE}}}}
+Entorno virtual para cada proyecto: aisla dependencias y evita problemas de compatibilidad.\\
+Créalo al iniciar el proyecto, abre cuando estés trabajando y cierra al finalizar de trabajar.\\
+\textbf{Crear}: \texttt{Abre dir proyecto → Ctrl+Ñ → python -m venv .venv → Ctrl+Shift+P → Python Interpreter → .venv}\\
+\hypertarget{pip_venv}{
+\text{Actualizar Pip Local}}: \texttt{python -m pip install --upgrade pip} \textit{(Ejecutar siempre tras activar el venv)}\\
+\text{Verificar Ruta}: \texttt{where pip} debe apuntar a la carpeta \texttt{.venv}\\
+\text{Tras crear el entorno virtual, configura lo siguiente}:\\
+\text{Formato}: \texttt{pip install black → Ctrl+, → Python Formattixng Provider → black}\\
+\text{Instala básicos}: \texttt{pip install matplotlib numpy scipy pandas scikit-learn jupyter}\\
+\text{Persistencia}: \texttt{pip freeze > requirements.txt} \textit{(Documenta versiones)}\\
+\textbf{Activar}: \texttt{Ctrl+Ñ → .venv\textbackslash Scripts\textbackslash activate} \;\;\; \textbf{Desactivar}: \texttt{Ctrl+Ñ → deactivate}\\ 
+\text{Replicar entorno}: \texttt{pip install -r requirements.txt} \textit{(En un nuevo PC/clon)}
+
+
+\section{CONTROL DE VERSIONES (GIT)}
+\textbf{Configuración Inicial}: Establece tu identidad dentro del ecosistema \texttt{Git}\\
+\texttt{git config --global user.name "Tu Nombre"} \\
+\texttt{git config --global user.email "tu@email.com"}\\
+\texttt{git config --list}: Lista tu configuración de nombre y correo.
+\\
+\textbf{Flujo de Trabajo Local}\\
+\texttt{git init}: Inicializar repositorio.\\
+\texttt{git status}: Listar archivos modificados y estado del índice.\\
+\texttt{git diff}: Mostrar la diferencia ($\Delta$) entre el directorio de trabajo y el índice.\\
+\texttt{git add .}: Indexar todos los cambios.\\
+\texttt{git commit -m "mensaje"}: Crear un snapshot (punto de control) en el historial.\\
+\texttt{git status}: Muestra el estado del directorio de trabajo y del área de preparación. \\
+\texttt{git log --oneline --graph}: Visualización del grafo de evolución del proyecto.
+\\\textit{Nota:} Si aparecen files de directorios padres, has inicializado (\texttt{git init}) en el nodo incorrecto. Antes de ejecutar \texttt{Remove-Item -Recurse -Force .git}, verifica ruta con \texttt{git rev-parse --show-toplevel}.\\
+\textbf{Ramificaciones (Branching)}\\
+\texttt{git branch <nombre>}: Crear una rama para experimentación aislada.\\
+\texttt{git checkout <name>}: Cambiar a una rama.
+\\\texttt{git checkout -b <nombre>}: Crear y cambiar a la nueva rama simultáneamente.\\
+\texttt{git branch -a}: Lista todas las ramas del repositorio, tanto las locales como las remotas.\\
+\texttt{git merge <nombre>}: Fusionar los cambios de la rama especificada en la rama activa.\\
+\textbf{Sincronización Remota}\\
+\texttt{git remote add origin <url servidor>}: Vincular repositorio local con servidor (GitHub).\\
+\texttt{git push -u origin main}: Cargar commits locales al servidor remoto.\\
+\texttt{git pull}: Descargar y fusionar cambios del remoto (equivale a \texttt{fetch} + \texttt{merge}).\\ 
+\textbf{Gestión de Desastres y Retroceso (Undo)}\\
+\texttt{git restore <archivo>}: Descartar cambios locales (volver al último commit).\\
+\texttt{git reset --soft HEAD$\sim$1}: Deshacer último commit manteniendo cambios en \textit{staging}.\\
+\texttt{git reset --hard HEAD$\sim$1}: \textbf{Peligro.} Borra commit y cambios no guardados.\\
+\texttt{git restore --staged <archivo>}: Sacar del índice sin modificar contenido.\\
+\textbf{Colaboración y Resolución de Conflictos}\\
+\texttt{git fetch}: Descargar metadatos del remoto sin modificar archivos locales.\\
+\texttt{git merge <rama>}: Fusionar. Si hay \textbf{Conflictos}, editar manualmente, \texttt{git add} y \texttt{git commit}.\\
+\texttt{git pull}: Atajo de \texttt{fetch} + \texttt{merge}. Riesgo de conflictos directos.\\
+\textbf{Organización y Depuración}\\
+\texttt{git stash}: Almacenamiento temporal de cambios no commiteados (limpieza rápida).\\
+\texttt{git show <hash>}: Inspeccionar cambios detallados de un commit específico.\\
+\texttt{git blame <archivo>}: Listar autor y fecha de modificación por cada línea del archivo.
+
+
+{
+\setlength{\columnseprule}{0pt}
+\begin{multicols}{2}
+    \section*{ESTRUCTURA DE PROYECTO}
+    \begin{Verbatim}
+project/
+├── .venv/         # Entorno local
+├── .gitignore     # Filtro de Git
+├── data/
+│   ├── raw/       # Datos inmutables
+│   └── processed/
+├── notebooks/     # (.ipynb) 
+├── src/           # (.py)
+│   ├── __init__.py
+│   └── tools.py
+└── README.md
+\end{Verbatim}
+\columnbreak
+\vspace*{-7pt}
+    \begin{Verbatim}
+    FICHERO .gitignore
+__pycache__/
+*.pyc
+*$py.class
+.venv/
+build/
+dist/
+.ipynb_checkpoints
+.vscode/
+*.code-workspace
+\end{Verbatim}
+\end{multicols}
+}
+
+-- \texttt{.ipybn, .gitignore}: Los creas desde el explorador, no con \texttt{Ctrl+N}. Kernel debe apuntar a .venv\\
+
+
+
+\section{ESTRUCTURA DE CELDAS (\texttt{ipython})}
+\textbf{Marcador de celda}: \texttt{\# \%\%} (convierte \texttt{.py} en entorno modular).\\
+\textbf{Ejecución rápida}: \texttt{Shift + Enter} para enviar bloque al núcleo interactivo.\\
+\textbf{Plot Viewer}: Icono de imagen en gráficas renderizadas. Zoom y exportación directa.\\
+-- \texttt{.py}: Outputs temporales, comentarios de código estándar, ejecución directa como script.\\
+-- \texttt{.ipynb}: Outputs persistentes, Markdown y \LaTeX, requiere conversión (\texttt{nbconvert}).
+

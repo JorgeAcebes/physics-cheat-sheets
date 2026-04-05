@@ -1,0 +1,280 @@
+\section{SINTAXIS Y ARITMÉTICA}
+\textbf{Básicos:} \texttt{\#} comment; \texttt{\textbackslash} Continuar línea.\\
+\textbf{Tipos:} \texttt{int} (1), \texttt{float} (1.0, 1e0), \texttt{complex} ($1+2j$), \texttt{str} (``..."). \\
+\textbf{I/O:} \texttt{x = int(input("..."))} (Cast manual); \texttt{print(a, b, sep=","); print("="*20)}. \\
+\textbf{Operadores:} \texttt{+}, \texttt{-}, \texttt{*}, \texttt{/}, \texttt{**} (potencia), \texttt{//} (div. entera, suelo), \texttt{\%} (módulo). \\
+\textbf{Asignación y Modificación:} \texttt{x, y = 2, a+b}; \texttt{x, y = y, x}, \texttt{+=}, \texttt{-=}, \texttt{*=}, \texttt{/=}, \texttt{//=}.\\
+
+
+\section{COLECCIONES NATIVAS} \textbf{Listas:} \texttt{r = [x, y, z]} (heterogéneas, mutables, punteros a objetos dispersos). \\
+\textbf{List Comprehension:} \texttt{[f(x) for x in iter if cond]} ($\forall x \in \text{iter} \mid \text{cond}(x) \rightarrow f(x)$).\\
+\textbf{Funciones:} \texttt{sum(r), min(r), max(r), len(r)}, \texttt{r.sort(key=f)}, \texttt{r.reverse()}, \texttt{r.count(x)}. \\
+\textbf{Métodos:} \texttt{r.append(x)} (añadir al final), \texttt{r.pop(idx)} eliminar.\\
+\textbf{Slicing 1D:} \texttt{r[m:n]} ($m \rightarrow n-1$); \texttt{r[m:]} ($m \rightarrow$ fin); \texttt{r[:n]} (inicio $ \rightarrow n - 1$).\\
+\textbf{Dicts:} \texttt{\{k: v\}}, \texttt{keys()}, \texttt{values()}, \texttt{items()}, \texttt{get(k, d)}, \texttt{update(d2)}, \texttt{pop(k)}, \texttt{clear()}.\\
+\textbf{Dict Comprehension:} \texttt{\{k: v for k, v in zip(keys, vals)\}}.\\
+\textbf{Sets:} \texttt{\{a, b\}}, \texttt{add(x)}, \texttt{update(it)}, \texttt{s1|s2} ($\cup$), \texttt{s1\&s2} ($\cap$), \texttt{s1-s2} ($\setminus$), \texttt{s1\^{}s2} ($\Delta$).\\
+\textbf{Tuplas:} \texttt{(a, b)} (inmutable), \texttt{count(x)}, \texttt{index(x)}.\\
+\textbf{Strings:} \texttt{s.split()}, \texttt{s.join(it)}, \texttt{s.strip()}, \texttt{s.replace(a, b)}, \texttt{s.find()}, \texttt{s.upper()}, \texttt{s.encode()}.\\
+\textbf{Built-ins:} \texttt{range(i, j, k)}, \texttt{enumerate(it)}, \texttt{zip(a, b)}, \texttt{map(f, it)}, \texttt{filter(p, it)}, \texttt{all(it)}, \texttt{any(it)}.\\
+
+
+\section{CONTROL Y FUNCIONES}
+\textbf{Condicionales:} \texttt{if cond:}, \texttt{elif cond:}, \texttt{else:}. \\
+\textbf{Comparadores:} \texttt{==, !=, >, <, >=, <=, and, or, is} (id), \texttt{in} (pertenencia). \\
+\textbf{Bitwise:} \texttt{\&} (AND), \texttt{|} (OR), \texttt{\^{}} (XOR), \verb|~| (NOT), \texttt{x << n} ($x \cdot 2^n$), \texttt{x >> n} ($\lfloor x\cdot 2^{-n} \rfloor$).\\
+\textbf{Bucles:} \texttt{while cond:}, \texttt{break} (abortar), \texttt{continue} (saltar a iteración). \\
+\textbf{For:} \texttt{for n in range(i, f, s)} (enteros $i \to f-1$ con paso $s$). \\
+\textbf{Excepciones:} \texttt{try...except Error as e...finally}.\\
+\textbf{Iteradores Numpy:} \texttt{arange(i, f, s)} (paso $s$, reales); \texttt{linspace(i, f, n)} ($n$ elementos). \\
+\textbf{Funciones:} \texttt{def nombre(arg1, ..., arg\_j): ... return res1, ..., res\_k}.\\
+\textbf{Funciones Lambda:} \texttt{f = lambda x: x**2 + 1}. 
+
+
+\section{MANIPULACIÓN DE DATOS E IO}
+\textbf{Lectura:} \verb|with open('f.txt', 'r') as f: data = f.read()| (lectura segura), \texttt{f.readline()}.\\
+\textbf{Escritura:} \texttt{f.write(s)}, \texttt{f.writelines(lista)} (sin auto-newline), \texttt{f.close()}.\\
+
+
+\section{SISTEMA, OS Y GESTIÓN DE RUTAS}
+\textbf{OS Básico:} \texttt{os.getcwd()} (dir actual), \texttt{os.listdir()} (listar), \verb|os.chdir('path')| (cambiar dir), \texttt{os.makedirs(p, exist\_ok=True)} (crear), \texttt{os.remove(p)}, \texttt{os.rename(s,d)}, \texttt{os.system("cmd")} (shell exec).\\
+\textbf{Path (os.path):} \texttt{join(p1, p2)} (ruta robusta), \texttt{exists(p)} (verificar), \texttt{splitext(f)} (separar extensión), \texttt{isdir(p)/isfile(p)} (validación tipo).\\
+\textbf{Entorno:} \verb|os.environ.get('VAR')| (leer variable entorno), \texttt{os.name} (id de OS).
+
+\section{INTERFAZ DEL INTÉRPRETE (SYS)}
+\textbf{Control de Ejecución:} \texttt{sys.argv} (lista de argumentos), \texttt{sys.exit()} (finalizar script), \texttt{sys.setrecursionlimit(n)} (ajuste de stack).\\
+\textbf{Rutas y Módulos:} \texttt{sys.path} (lista búsqueda de módulos), \texttt{sys.path.append(dir)} (inyección de ruta), \texttt{sys.modules} (caché de módulos cargados).\\
+\textbf{I/O:} \texttt{sys.stdin}, \texttt{sys.stdout}, \texttt{sys.stderr} (descriptores estándar).
+
+\section{TIEMPO Y BENCHMARKING}
+\textbf{Módulo time:} \texttt{time.time()} (segs desde época), \texttt{time.sleep(s)}, \texttt{time.strftime("\%Y-\%m-\%d")} (formato).\\
+\textbf{Precisión:} \texttt{time.perf\_counter()} (monotónico, ideal para benchmark $\Delta t$), \texttt{time.process\_time()} (tiempo CPU usuario/sistema). \verb|t0_perf = time.perf_counter()|
+\texttt{\# ... proceso ... }
+\verb|tf_perf = time.perf_counter()|
+\verb|dt_perf = tf_perf - t0_perf|
+
+
+
+\section{FORMATEO Y CADENAS (F-STRINGS)}
+\textbf{Interpolación:} \texttt{f"\{var\}"}, \texttt{f"\{expr\}"}.\\
+\textbf{Numérico:} \texttt{f"\{x:.nf\}"} (fijo), \texttt{f"\{x:.ne\}"} (científico), \texttt{f"\{x:0>n\}"} (relleno ceros izq).\\
+\textbf{Alineación:} \texttt{<n} (izq), \texttt{>n} (der), \verb|^n| (centro). Relleno: \texttt{f"\{x:*<10\}"}.\\
+\textbf{Base:} \texttt{b} (bin), \texttt{x} (hex), \texttt{o} (oct). Porcentaje: \texttt{f"\{p:.1\%\}"}.
+
+\section{INTROSPECCIÓN Y METADATOS DE MÓDULOS \texttt{m} Y OBJETOS \texttt{o}}
+\textbf{Exploración:} \texttt{dir(m)} (lista de nombres), \texttt{vars(m)} ($\equiv$ \texttt{m.\_\_dict\_\_}), \texttt{type(o)}, \texttt{id(o)} (dirección mem.). \\
+\textbf{Módulo inspect:} \texttt{import inspect}; \texttt{getmembers(m, pred)} (ej. \texttt{isbuiltin}), \texttt{getsource(o)} (código fuente). \\
+\textbf{Documentación:} \texttt{help(o)}, \texttt{o.\_\_doc\_\_} (docstring), \texttt{o.\_\_name\_\_} (nombre del objeto).
+
+ \section{\href{https://numpy.org/}{NUMPY} \normalfont{\texttt{(np)}}}
+  \textbf{Atributos:} \texttt{a.ndim} (dim), \texttt{a.shape} (forma), \texttt{a.size} (núm el), \texttt{a.dtype} (tipo), a.T (traspuesta), \texttt{reshape(a,(n,m))}, \texttt{flatten()} (1D) \\
+\textbf{Creación:} \texttt{array([8,5])} (vect 1D), \texttt{array([[4],\,[7]])} (mtrx 2$\times$1) \texttt{zeros(N)}, \texttt{ones(shp)}, \texttt{eye(N)}, \texttt{diag(v)}. \\
+\textbf{Rangos:} \texttt{arange(i, f, step)}, \texttt{linspace(i, f, n)} (lineal), \texttt{logspace(i, f, n)}. \\
+\textbf{Mallas:} \texttt{X, Y = meshgrid(x, y)} (campos 2D/3D). \\
+\textbf{Indexing:} \texttt{a[i,j]} (elemento), \texttt{a[i:f:s]} (slice), a[i,:] (fil i), a[:,j] (col j), a[i:j, k:l]  (submatriz), \texttt{a[a>0]} (bool mask), \texttt{a[::-1]} (invertir orden). \\
+\textbf{Operaciones:} Element-wise por defecto ($+, -, *, /$). \\
+\textbf{Producto:} \texttt{dot(a, b)} o \texttt{a @ b} (matricial), \texttt{vdot(a, b)} ($\bar{a} \cdot b$), \texttt{cross(a, b)} ($a \times b$). \\
+\textbf{Einsum (Tensores):} \verb|einsum('ij,jk->ik', A, B)| (mult. matrices), \verb|einsum('ii', A)| (traza). \\
+\textbf{Linalg (\texttt{np.linalg}):} \texttt{norm(x)}, \texttt{det(A)}, \texttt{inv(A)}, \texttt{eig(A)} (autovalores), \texttt{solve(A, b)}, \texttt{svd(A)}, \texttt{cholesky(A)}. \\
+ \textbf{Estadística:} \texttt{mean(a)}, \texttt{std(a)}, \texttt{var(a)}, \texttt{sum(a)}, \texttt{prod(a)}, \texttt{cumsum(a)}. \\
+\textbf{Reducción:} \texttt{sum(a, axis=n)}, \texttt{min/max(a)}, \texttt{argmin/argmax(a)}, \texttt{unique(a)}. \\
+ \textbf{Apilado:} \texttt{hstack([a,b])}, \texttt{vstack([a,b])}, \texttt{concatenate((a,b), axis=n)}. \\
+\textbf{Shape Ops:} \texttt{a.reshape(n, m)},
+\texttt{a.flatten()},
+\texttt{hstack/vstack([a, b])}, \texttt{concatenate((a, b), axis=0)}.  \\
+\textbf{Constantes:} \texttt{pi} ($\pi$), \texttt{e} ($e$), \texttt{inf} ($\infty$), \texttt{nan} (NaN). \\
+ \textbf{Funciones:} \texttt{exp(x)}, \texttt{log(x)}, \texttt{log10(x)}, \texttt{sqrt(x)}, \texttt{sin, cos, tan, arcsin, arccos, arctan, arctan2(y, x)}.\\
+\textbf{Aleatorio (\texttt{np.random}):}
+\texttt{rand(n,m)} ($\mathcal{U}[0,1)$), \texttt{randn(n,m)} ($\mathcal{N}(0,1)$),
+\texttt{randint(i, f, n)} (enteros),
+ \texttt{seed(k)} (semilla, reproducibilidad), \texttt{shuffle(a)} (reordena in-place), \texttt{choice(a, size=n, p=probs)}. \\
+
+
+
+
+\section{\href{https://scipy.org/}{SCIPY} \normalfont{\texttt{(sp)}}}
+\textbf{Integración (\texttt{scipy.integrate}):}
+\texttt{quad(f, a, b)}:
+$\int_{\scalebox{0.6}{$a$}}^{\scalebox{0.6}{$b$}} f(x)\,dx$, \texttt{dblquad(f, a, b, gfun, hfun)}: $\int_{\scalebox{0.6}{$x=a$}}^{\scalebox{0.6}{$b$}}\int_{\scalebox{0.6}{$y=g(x)$}}^{\scalebox{0.6}{$h(x)$}}\!f(x,y)\,dy\,dx$, \texttt{simpson(y, x)} (método de Simpson, datos discretos). \\
+\textbf{EDOs:}
+\verb|solve\_ivp(fun, [t0, tf], y0, method='RK45')|: Sistema $\dot{\vec{y}} = f(t, \vec{y})$, \texttt{odeint(f, y0, t)}: \textit{legacy}. \\
+\textbf{Optimización (\texttt{scipy.optimize}):} \texttt{minimize(fun, x0)}, 
+\texttt{root(fun, x0)} (ceros de función), \\
+\texttt{curve\_fit(f, xdata, ydata)} (mínimos cuadrados no lineales) \\
+\textbf{Interpolación (\texttt{scipy.interpolate}):}
+\verb|interp1d(x, y, kind='cubic')|,
+\texttt{griddata((x,y), z, (X,Y))}.\\
+\textbf{Fourier (\texttt{scipy.fft}):} \texttt{fft(x)} (Rápida), \texttt{fftfreq(n, d)}. \\
+\textbf{Constantes}
+\href{https://docs.scipy.org/doc/scipy/reference/constants.html}{(\texttt{scipy.constants})}\textbf{:} \texttt{c}, \texttt{h}, \texttt{hbar}, \texttt{G}, \texttt{e}, \texttt{m\_e}, \texttt{g}, ...
+
+\section{\href{https://matplotlib.org/}{MATPLOTLIB} \texttt{(pyplot: plt)} -- \href{https://matplotlib.org/cheatsheets/cheatsheets.pdf}{cheatsheet}}
+\textbf{Core:} \texttt{fig, ax = plt.subplots(nrows, ncols, figsize=(w, h))}. \\
+\textbf{Traza:} \verb|ax.plot(x, y, 'r--', label=r'$\psi(x)$', lw=2)|. \\
+\textbf{Scatter:} \verb|ax.scatter(x, y, c=z, cmap='viridis', s=10)|. \\
+\textbf{Estadística:} \texttt{ax.bar(x, h)}, \texttt{ax.hist(data, bins=n)}, \texttt{ax.pie(v)}. \\
+\textbf{Campos:} \texttt{ax.quiver(X,Y,U,V)} (vectores), \texttt{ax.streamplot(X,Y,U,V)}. \\
+\textbf{Mapas:} \verb|im=ax.imshow(M, origin='lower', extent=[x0,xf,y0,yf])|, \texttt{plt.colorbar(im, ax=ax)}. \\
+\textbf{Contornos:} \texttt{ax.contour(X, Y, Z, lev)}, \texttt{ax.contourf} (relleno). \\
+\textbf{Formato:} \verb|set_xlabel(r'$\phi$')|, \texttt{set\_xlim(min, max)}, \verb|set_yscale('log')|, \verb|legend(loc='best')|, \verb|grid(ls=':')|\\
+\textbf{3D:} \verb|ax = fig.add_subplot(projection='3d')|; \texttt{plot\_surface(X,Y,Z)}. \\
+\textbf{Salida:} \verb|plt.savefig('plot.pdf', dpi=300, bbox_inches='tight')|, \texttt{plt.show()}, \texttt{plt.close()}.
+
+\section{\href{https://www.sympy.org/en/index.html}{SYMPY} \normalfont{\texttt{(sym)}}}
+\textbf{Vars:} \verb|x, y, z = symbols('x y z')|, \texttt{init\_printing()}. \\
+\textbf{Ops:} \texttt{simplify(expr)}, \texttt{expand(e)}, \texttt{factor(e)}, \texttt{collect(e, x)}. \\
+\textbf{Cálculo:} \texttt{diff(f, x, n)} ($\partial_x^n f$), \texttt{integrate(f, (x, a, b))}, \texttt{limit(f, x, oo)} (\!\!\scalebox{0.7}{$\begin{array}{c}
+     \lim\\[-2pt]
+     {x\to\infty}
+\end{array}\!\!\!f$}\!) \\
+\textbf{Solve:} \texttt{solveset(eq, x)} (algebraico), \texttt{dsolve(eq, f(x))} (EDO simbólica). \\
+\textbf{Matrices:} \texttt{Matrix([[1,0],[0,1]])}, \texttt{M.det()}, \texttt{M.inv()}. \\
+\textbf{Numérico:} \texttt{N(expr, digits)}, \verb|f_np = lambdify(x, expr, 'numpy')|.
+
+\section{\href{https://pandas.pydata.org/}{PANDAS} \normalfont{\texttt{(pd)}}}
+\textbf{Estructuras:} \texttt{Series(data, index)}, \texttt{DataFrame(data, columns)}. \\
+\textbf{I/O:} \verb|read_csv/excel/sql('path')|, \verb|to_csv('path')|. \\
+\textbf{Info:} \texttt{df.head()},
+\texttt{df.info()},
+\texttt{df.shape},
+\texttt{df.describe()}, \texttt{df.dtypes}, \texttt{df.index}, \texttt{df.columns}. \\
+\textbf{Selección:} \verb|df['col']|, \verb|df[['a','b']]| (dataframe), \texttt{df.iloc[fila, col]}, \verb|df.loc[idx, 'col']| (etiqueta). \\
+\textbf{Filtrado:} \verb|df[df['E'] > 0]|, \verb|df.query('E > 0 & P < 1')|. \\
+\textbf{Limpieza y Manipulación:} \texttt{df.dropna()} (elimina nulos), \texttt{df.drop\_duplicates()}, 
+\texttt{df.apply(func)},
+\texttt{df.fillna(v)} (rellena), \texttt{df.rename(columns=\{"a":"b"\})}, \verb|df.sort_values('c')|. \\
+\textbf{Agrupación:} \verb|df.groupby('cat').agg(['mean', 'sum'])|. \\
+\textbf{Fusión:} \verb|merge(d1, d2, on='k')|, \texttt{concat([d1, d2])}.\\
+\textbf{Series Temporales:} \verb|to_datetime(df['t'])|, \verb|df.set_index('t')|
+
+% \section{\href{https://vpython.org/}{VPYTHON} \normalfont{\texttt{(vp)}}}
+% \textbf{Canvas:} \texttt{scene = canvas(background=color.black, width=w)}. \\
+% \textbf{Objetos:} \texttt{sphere(pos=vec(0,0,0), radius=1, color=color.red)}. \\
+% \textbf{Otros:} \texttt{box(size=vec(L,H,W))}, \texttt{arrow(axis=vec(x,y,z))}, \texttt{helix()}, \texttt{cylinder()},
+% \texttt{pyramid()}, \texttt{arrow()}.\\
+% \textbf{Animación:} Loop \texttt{while True:} + \texttt{rate(fps)}. \\
+% \textbf{Vectores:} \texttt{vec(x,y,z)}, \texttt{mag(v)}, \texttt{hat(v)} (unitario), \texttt{dot(u,v)}, \texttt{cross(u,v)}. \\
+% \textbf{Gráficas RT:} \texttt{gcurve(color=color.cyan)}.
+
+
+
+\section{PRECISIÓN ARBITRARIA (\texttt{mpmath})}
+Indispensable cuando el error de redondeo de los 64 bits ($10^{\scalebox{0.7}{-16}}$) de NumPy es inaceptable.
+\textbf{Configuración:} \texttt{mp.dps = 50} (50 decimales). \\
+\textbf{Tipos:} \texttt{mpf(1) / 3}, \texttt{mpc(1j)}. \\
+\textbf{Funciones:} \texttt{zeta(s)}, \texttt{gamma(z)}, \texttt{besselj(n, x)}. \\
+\textbf{Cálculo:} \texttt{diff(f, x, n=1)}, \texttt{quad(f, [a, b])}, \texttt{findroot(f, x0)}.
+
+
+
+
+\section{PROPAGACIÓN DE INCERTIDUMBRES (\texttt{uncertainties})} \vspace{-2pt}
+Automatiza el cálculo de errores mediante derivadas parciales: $\sigma_f^2 \approx \sum ({\partial_{x_i} f})^2 \sigma_{x_i}^2$. \\[-2pt]
+\textbf{Variables:} \texttt{x = ufloat(val, err)}. \\
+\textbf{Arrays:} \texttt{unumpy.uarray([vals], [errs])}. \\
+\textbf{Acceso:} \texttt{x.n} (valor nominal), \texttt{x.s} (desviación estándar). \\
+\textbf{Funciones:} \texttt{unumpy.sin(x)}, \texttt{unumpy.exp(x)}.
+
+
+
+\section{VISUALIZACIÓN ESTADÍSTICA (\texttt{seaborn}: \texttt{sns})} Capa de alto nivel sobre Matplotlib orientada a la exploración de datos. \\\textbf{Estilo:} \texttt{sns.set\_theme(style="whitegrid")}. \\ \textbf{Distribución:} \texttt{sns.histplot(data, kde=True)}, \texttt{sns.kdeplot(x)}. \\ \textbf{Relacional:} \texttt{sns.scatterplot(x, y, hue="cat")}, \texttt{sns.lineplot()}. \\ \textbf{Categorías:} \texttt{sns.boxplot()}, \texttt{sns.violinplot()}. \\ \textbf{Multivariante:} \texttt{sns.pairplot(df)} (matriz de dispersión), \texttt{sns.heatmap(corr)}.
+
+
+
+
+
+\section*{CONTROL DE VERSIONES EN VS CODE (GIT GUI)}
+
+\textbf{Paradigma:} \textit{Source Control} (\texttt{Ctrl+Shift+G}): observar en tiempo real el estado del repositorio.\\\textit{Changes}: representa el \textit{working directory}. \textit{Staged Changes}: representa el \textit{index}.
+
+\textbf{FLUJO DE TRABAJO LOCAL}
+\begin{tabular}{lp{10cm}}
+    \toprule
+    \textbf{Operación Git} & \textbf{Acción en VS Code} \\
+    \midrule
+    \texttt{git init} & Botón \textbf{Initialize Repository} en el panel lateral. \\
+    \texttt{git status} & Lista de archivos: \textbf{M} (Modified), \textbf{U} (Untracked) o \textbf{A} (Added). \\
+    \texttt{git diff} & Clic sobre el archivo: Abre el editor de diferencias ($\Delta$). \\
+    \texttt{git add} & Clic en el icono \textbf{+} (Plus) junto al nombre del archivo o sección. \\
+    \texttt{git commit} & Escribir mensaje en el cuadro superior y clic en \textbf{Commit} (check). \\
+    \texttt{git log} & Panel \textbf{Timeline} en la parte inferior del explorador de archivos. \\
+    \bottomrule
+\end{tabular}
+
+\textbf{GESTIÓN DE RAMAS (BRANCHING)}\\
+Gestión en la \textbf{Barra de Estado} (esquina inferior izquierda) y el menú de contexto (\dots).
+
+- \textbf{Crear y Cambio:} Clic en nombre rama actual $\rightarrow$ \texttt{Create new branch} o seleccionar existente.
+
+- \textbf{Publicar:} Icono nube barra estado (\textit{Publish Branch}). Automaticamente enlaza con remoto.
+
+- \textbf{Fusión (Merge):} Menú \dots $\rightarrow$ \textbf{Branch} $\rightarrow$ \textbf{Merge Branch...}. Seleccionar la rama origen para integrar en la rama activa.
+
+- \textbf{Resolución de Conflictos:} VS Code detecta la colisión y marca el archivo con \textbf{C}.
+
+1. Abrir archivo en conflicto.\\
+2. Clic en \textbf{Resolve in Merge Editor} (esquina inferior derecha).\\
+3. Interfaz de 3 paneles: \textit{Current} (local), \textit{Incoming} (remoto/otra rama) y \textit{Result}.
+
+- \textbf{Stash (Memoria temporal):} Menú \dots $\rightarrow$ \textbf{Stash} $\rightarrow$ \textbf{Stash (Include Untracked)}. Ideal para limpiar el área de trabajo antes de un \textit{checkout} sin perder el progreso.
+
+\textbf{SINCRONIZACIÓN Y REMOTOS}
+\begin{tabular}{lp{10cm}}
+    \toprule
+    \textbf{Acción} & \textbf{Procedimiento en UI} \\
+    \midrule
+    \textbf{Push / Pull} & Botón circular \textbf{Sync Changes} en la barra de estado (ejecuta ambos). \\
+    \textbf{Fetch} & Menú \dots $\rightarrow$ \textbf{Pull, Push} $\rightarrow$ \textbf{Fetch} (actualiza metadatos sin alterar archivos). \\
+    \textbf{Remote Add} & Panel \textit{Source Control} $\rightarrow$ sección \textit{Remotes} $\rightarrow$ Icono \textbf{+}. \\
+    \bottomrule
+\end{tabular}
+
+\textbf{GESTIÓN DE ERRORES (UNDO)}\\
+- \textbf{Descartar cambios:} Icono de flecha curva (\textit{Discard Changes}) sobre el archivo. Elimina el $\Delta$ local irreversiblemente.
+
+- \textbf{Deshacer último commit:} Menú \dots $\rightarrow$ \textbf{Commit} $\rightarrow$ \textbf{Undo Last Commit}.
+
+- \textbf{Sacar de Staging:} Icono \textbf{-} (Minus) en la sección \textit{Staged Changes}.
+
+\hrule
+~\\
+Author: \href{https://www.linkedin.com/in/jorge-acebes-hern%C3%A1ndez/}{Jorge Acebes Hernández}. Code: \href{https://github.com/JorgeAcebes/Formularios/tree/main}{GitHub}. Last revised: \today \hfill\scalebox{0.8}{
+\href{https://creativecommons.org/licenses/by-nc/4.0/}{CC BY-NC 4.0}}
+
+
+
+% \clearpage
+
+% \section{PROGRAMACIÓN ORIENTADA A OBJETOS (POO)}La POO no es solo organización, es la traducción de leyes físicas a estructuras computacionales. Una \textbf{Clase} es la ley general (ecuación); un \textbf{Objeto} es el sistema físico concreto con condiciones iniciales $(\vec{r}_0, \vec{v}_0)$.
+% \\\textbf{Definición y Constructor:} \\
+% \texttt{class Sistema:}: Define la plantilla del sistema dinámico. \\
+% \texttt{def \_\_init\_\_(self, ...):}: Inicializa el estado térmico o mecánico. \texttt{self} es el puntero a la dirección de memoria de la instancia específica. \\
+% \textit{Crítica:} No confundas \texttt{self} con una palabra reservada; es una convención, aunque obligatoria para acceder a los atributos de instancia.\\\textbf{Pilares fundamentales:} \\
+% \underline{Abstracción:} Define qué es un objeto sin detallar cómo funciona. Crucial para interfaces de hardware o solvers numéricos. \\
+% \underline{Encapsulamiento:} \\\texttt{\_variable}: Acceso restringido por cortesía. \\
+% \texttt{\_\_variable}: \textit{Name mangling}. Python renombra el atributo como \texttt{\_Clase\_\_variable} para evitar colisiones en herencia múltiple. \\\texttt{\@property}: Transforma métodos en atributos de lectura. Permite validación física (ej. impedir que una masa $m < 0$). \\\underline{Herencia:} \\\texttt{class Hamiltoniano(Operador):}: El hijo adquiere la estructura del padre. 
+% \\\texttt{super().\_\_init\_\_()}: Vital para asegurar que la cadena de inicialización no se rompa en sistemas complejos. \\\underline{Polimorfismo:} Un mismo mensaje, distintas ejecuciones. Un método \texttt{.integrar()} funcionará igual para un oscilador armónico que para un problema de tres cuerpos, ocultando la complejidad interna al usuario.\\\textbf{Métodos Especiales (Dunder Methods) para Física:} Permiten que los objetos operen con sintaxis matemática estándar:\\
+% \texttt{\_\_str\_\_(self)}: Representación para humanos (\texttt{print}).\\ \texttt{\_\_repr\_\_(self)}: Representación técnica unívoca.\\
+% \texttt{\_\_add\_\_(self, other)}, \texttt{\_\_mul\_\_}: Define la suma $A + B$ o producto $A \cdot B$ entre objetos.\\
+% \texttt{\_\_call\_\_(self, x)}: Hace que el objeto sea ejecutable como una función $f(x)$.
+% \\\texttt{\_\_matmul\_\_(self, other)}: Define el producto matricial $A \cdot B$ mediante el operador \texttt{\@}. \\\texttt{\_\_abs\_\_(self)}: Retorna la norma del estado $\| \psi \|$. \\\texttt{\_\_getitem\_\_(self, i)}: Permite indexar el objeto como un array para acceder a coordenadas.\\\textbf{Optimización y Estructuras Avanzadas (Nivel Experto):} \\\verb|__slots__ = ('x', 'v', 'm')|: Elimina el diccionario dinámico \texttt{\_\_dict\_\_} de la instancia. En simulaciones de $N$ cuerpos, esto reduce el consumo de RAM en un 40-50\% y acelera el acceso a atributos. \\\underline{Métodos de Clase vs Estáticos:} \\\texttt{\@classmethod}: Recibe \texttt{cls}. Ideal para \textit{Factories}. Ejemplo: \texttt{Particula.desde\_coords\_polares(r, theta)}. \\ \texttt{\@staticmethod}: Funciones que no dependen del estado (ej. constantes físicas $G, c$ o conversiones de unidades). No tienen acceso a \texttt{self} ni \texttt{cls}.\\
+% \textbf{Jerarquía de Resolución de Métodos (MRO):} En herencia múltiple, Python usa el algoritmo \textit{C3 Linearization} para decidir qué método ejecutar. Puedes consultarlo con \texttt{Clase.mro()}. Ignorar esto en arquitecturas grandes genera errores de ambigüedad en la propagación de métodos.
+
+
+
+
+
+% \section{MACHINE LEARNING (\texttt{scikit-learn}: \texttt{sklearn}) -- {\href{https://github.com/rahulmakwana1/machine-learning-cheat-sheets/tree/master}{cheatsheets}} \& \href{https://scikit-learn.org/stable/machine_learning_map.html}{estimator to choose}} \textbf{Preprocesamiento:} \texttt{StandardScaler().fit\_transform(X)}, \texttt{train\_test\_split(X, y)}. \\ \textbf{Modelos:} \\ \underline{Regresión:} \texttt{LinearRegression()}, \texttt{Ridge()}, \texttt{Lasso()}.\\ \underline{Clasificación:} \texttt{RandomForestClassifier()}, \texttt{SVC()}, \texttt{KNeighborsClassifier()}. \\ \underline{Clustering:} \texttt{KMeans(n\_clusters=k)}, \texttt{PCA(n\_components=n)}. \\
+% \underline{Interfaz:} \texttt{model.fit(X\_train, y\_train)}, \texttt{y\_pred = model.predict(X\_test)}.
+
+% \section{DEEP LEARNING (\texttt{pytorch}: \texttt{torch})}
+% Tensores con diferenciación automática para optimización. \\
+% \textbf{Tensores:} \texttt{torch.tensor(data, requires\_grad=True)}. \\
+% \textbf{Redes:} \texttt{nn.Module} (clase base), \texttt{nn.Linear(in, out)}, \texttt{nn.ReLU()}. \\
+% \textbf{Autograd:} \texttt{loss.backward()} calcula $\nabla \mathcal{L}$, \texttt{optimizer.step()} actualiza pesos. \\
+% \textbf{Dispositivo:} \verb|t.to('cuda')| para cálculo en GPU.
+
+
+
+
+% \clearpage
