@@ -1,8 +1,8 @@
-# Formularios de Física
-Repositorio con formularios de física en $\LaTeX$.
+# Physics Cheat Sheets 
+Repository containing physics cheat sheets in $\LaTeX$.
 
-## Requisitos
-* Overleaf o Distribución $\TeX$ (pdfLaTeX / XeLaTeX)
+## Requirements
+Overleaf or $\TeX$ distribution (pdfLaTeX / XeLaTeX)
 
 ## Disclaimer
 No warranties provided. While efforts were made to ensure formulaic integrity, typographical inaccuracies may exist. The author claims no responsibility for the material's suitability or correctness.
